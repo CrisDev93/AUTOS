@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">  
+
+<hibernate-mapping>
+    <class name="edu.uag.iidis.scec.modelo.Respuesta"
+           table="Respuesta"
+           dynamic-update="false"
+           dynamic-insert="false">
+
+        <id name="id"
+            column="idRespuesta"
+            type="java.lang.Long"
+            unsaved-value="null" >
+            <generator class="increment">
+            </generator>
+        </id>
+        <property name="idPregunta"
+            type="java.lang.Long"
+            not-null="true" />
+            
+        <property name="respuesta"
+            type="java.lang.String"
+            not-null="true" />
+            
+    </class>
+
+</hibernate-mapping>
